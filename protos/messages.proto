@@ -1,0 +1,25 @@
+syntax = "proto2";
+
+import "dart_options.proto";
+
+option (dart_options.imports) = {
+  mixins: [{
+    name: "ReflectMixin"
+    import_from: "reflect_mixin.dart"
+  }];
+};
+
+message MessageToBeReflected {
+  option (dart_options.mixin) = "ReflectMixin";
+  optional int64 a = 1;
+}
+
+message MessageToBeReflected2 {
+  option (dart_options.mixin) = "ReflectMixin";
+  optional int64 a = 1;
+}
+
+message RegularMessage {
+  option (dart_options.mixin) = "ReflectMixin";
+  optional int64 a = 1;
+}

@@ -1,0 +1,5 @@
+name: reflect_proto_mixin
+dependencies:
+  protobuf:
+  reflectable:
+  build_runner:
